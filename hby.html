@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For AMMU, My Love ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Georgia, "Times New Roman", serif;
+  color: white;
+  background:
+    radial-gradient(circle at 50% 10%, #651d42 0%, #260b20 45%, #090309 100%);
+}
+
+#hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -60px;
+  color: #ff76ad;
+  opacity: 0;
+  animation: floatUp linear forwards;
+  filter: drop-shadow(0 0 8px #ff3d91);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(.5) rotate(0);
+    opacity: 0;
+  }
+  15% { opacity: .85; }
+  100% {
+    transform: translateY(-115vh) scale(1.4) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.screen {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.card {
+  width: min(680px, 94vw);
+  padding: 45px 30px;
+  border-radius: 30px;
+  text-align: center;
+  background: rgba(255,255,255,.075);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 70px rgba(255, 39, 126, .22);
+}
+
+.eyebrow {
+  color: #ff9ec7;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 20px 0 15px;
+  font-size: clamp(42px, 10vw, 76px);
+  text-shadow: 0 0 30px #ff3f91;
+}
+
+.subtitle {
+  min-height: 80px;
+  color: #ffe0ed;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 25px;
+  border: 0;
+  border-radius: 999px;
+  color: white;
+  background: linear-gradient(135deg, #ff428d, #c9286f);
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(255,50,130,.35);
+  transition: .25s;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+#letter {
+  display: none;
+  margin-top: 35px;
+  text-align: left;
+  color: #ffeaf2;
+  font-size: 17px;
+  line-height: 1.9;
+  animation: fadeIn 1.3s ease;
+}
+
+#letter p {
+  margin-bottom: 19px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signature {
+  margin-top: 25px;
+  text-align: right;
+  color: #ffafd0;
+  font-style: italic;
+}
+
+#final {
+  display: none;
+  margin-top: 40px;
+  text-align: center;
+  animation: finalReveal 1.8s ease;
+}
+
+@keyframes finalReveal {
+  0% {
+    opacity: 0;
+    transform: scale(.5);
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.birthday {
+  font-size: clamp(35px, 9vw, 68px);
+  color: #ff9bc5;
+  text-shadow:
+    0 0 10px #ff3d91,
+    0 0 30px #ff3d91,
+    0 0 70px #ff1f7a;
+}
+
+.my-love {
+  margin-top: 12px;
+  font-size: 28px;
+}
+
+.final-text {
+  margin-top: 20px;
+  color: #ffdce9;
+  line-height: 1.8;
+}
+
+.music {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 5;
+  margin: 0;
+  padding: 10px 17px;
+  font-size: 13px;
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<button class="music" id="musicBtn" onclick="toggleMusic()">
+  ♫ Music
+</button>
+
+<div class="screen">
+  <div class="card">
+
+    <div class="eyebrow">Made with all my heart ❤️</div>
+
+    <h1>My AMMU</h1>
+
+    <div class="subtitle" id="typing"></div>
+
+    <button id="openBtn" onclick="openLetter()">
+      Open my letter to you 💌
+    </button>
+
+    <div id="letter">
+
+      <p>My Ammu, ❤️</p>
+
+      <p>
+        Today isn't just another day to me.
+        It's the day the world was gifted someone who became
+        incredibly special to my heart. 🎂
+      </p>
+
+      <p>
+        I wish I could put everything I feel for you into words,
+        but somehow words always seem too small.
+        You mean more to me than I can explain.
+      </p>
+
+      <p>
+        Thank you for being you — for your smile, your heart,
+        your little ways of making my days brighter,
+        and for simply being a beautiful part of my life.
+      </p>
+	  
+	   <p>
+    Sometimes I think about how everything started...
+    We first met in college, in the same class.
+    Back then, I don't think I could have imagined how important
+    you would become to me. ❤️
+  </p>
+
+  <p>
+    From the very beginning, there was something about you that
+    caught my attention. You were so beautiful, and somehow,
+    even the simplest moments around you felt special.
+  </p>
+
+  <p>
+    We never really went out alone like couples do, but honestly,
+    I don't think that matters. Because the memories we created
+    together are some of the most precious memories I have.
+  </p>
+
+  <p>
+    Our moments in the theatre... 🎬<br>
+    Our KFC moments... 🍗❤️<br>
+    Our Saravana Home visits... 🍽️<br>
+    And all those bus journeys together... 🚌💕
+  </p>
+
+  <p>
+    Those little moments, those random conversations, those
+    journeys, those laughs, and simply having you beside me —
+	they mean so much to me and they are memories I will always treasure.
+  </p>
+
+  <p>
+    Maybe that's what makes them so beautiful.
+    We didn't need anything extraordinary.
+    Just being together was enough to turn an ordinary day
+    into a memory worth keeping forever. ❤️
+  </p>
+
+  <p>
+    And if someone asked me which moments of my life I would
+    want to experience again, I know some of my happiest
+    answers would have you in them.
+  </p>
+
+  <p>
+    Today, on your birthday, I just want you to know how
+    special you are to me. Not only because you're beautiful,
+    but because of the happiness, comfort, and memories
+    you've brought into my life.
+  </p>
+
+  <p>
+    So here's my little birthday wish for you:
+    May you always smile the way you make me smile.
+    May you get everything your heart wishes for.
+  </p>
+
+      <div id="letter">
+
+  <p>My Love, ❤️</p>
+
+
+</div>
+
+      <div class="signature">
+        With all my love,<br>
+        Always yours ❤️
+      </div>
+
+      <div style="text-align:center;">
+        <button onclick="revealBirthday()">
+          There's one more thing... 🎁
+        </button>
+      </div>
+
+      <div id="final">
+        <div class="birthday">HAPPY BIRTHDAY 🎂</div>
+
+        <div class="my-love">
+          AMMU, My Love ❤️
+        </div>
+
+        <div class="final-text">
+          May this year bring you endless smiles,<br>
+          beautiful memories, and every happiness you deserve.<br><br>
+
+          <strong>I love you. ❤️</strong>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!--
+  OPTIONAL MUSIC:
+  Put an MP3 file in the same folder as this HTML
+  and rename it to "music.mp3".
+-->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const message =
+"Before you read anything else... just know that you are one of the most beautiful parts of my life. ❤️";
+
+let index = 0;
+
+function typeMessage() {
+  if (index < message.length) {
+    document.getElementById("typing").innerHTML += message[index];
+    index++;
+    setTimeout(typeMessage, 45);
+  }
+}
+
+typeMessage();
+
+function createHeart() {
+  const heart = document.createElement("div");
+
+  heart.className = "heart";
+  heart.innerHTML =
+    ["♥", "♡", "❤", "💕", "💗", "💖"]
+    [Math.floor(Math.random() * 6)];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (14 + Math.random() * 30) + "px";
+  heart.style.animationDuration = (5 + Math.random() * 7) + "s";
+
+  document.getElementById("hearts").appendChild(heart);
+
+  setTimeout(() => heart.remove(), 13000);
+}
+
+setInterval(createHeart, 400);
+
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+  document.getElementById("openBtn").style.display = "none";
+
+  setTimeout(() => {
+    document.getElementById("letter")
+      .scrollIntoView({ behavior: "smooth" });
+  }, 200);
+}
+
+function revealBirthday() {
+
+  document.getElementById("final").style.display = "block";
+
+  for (let i = 0; i < 50; i++) {
+    setTimeout(createHeart, i * 50);
+  }
+
+  setTimeout(() => {
+    document.getElementById("final")
+      .scrollIntoView({ behavior: "smooth" });
+  }, 200);
+}
+
+let playing = false;
+
+function toggleMusic() {
+
+  const music = document.getElementById("music");
+  const button = document.getElementById("musicBtn");
+
+  if (!playing) {
+
+    music.play().then(() => {
+      playing = true;
+      button.innerHTML = "❚❚ Music";
+    }).catch(() => {
+      alert("Add your music.mp3 file beside index.html ❤️");
+    });
+
+  } else {
+
+    music.pause();
+    playing = false;
+    button.innerHTML = "♫ Music";
+
+  }
+}
+
+</script>
+
+</body>
+</html>
